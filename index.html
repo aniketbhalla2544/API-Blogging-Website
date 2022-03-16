@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blogs | Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- my css -->
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <!-- logo -->
+      <a href="index.html" class="logo d-flex flex-column justify-content-center align-items-center">
+        <span class="serif-heading">Satnam</span>
+        <span class="fw-600">
+          Blogs
+        </span>
+      </a>
+      <ul id="navbar" class="d-flex flex-nowrap justify-content-start align-items-center">
+        <li><a href="./index.html">home</a></li>
+        <li><a href="./about.html">about</a></li>
+        <li><a href="./career.html">career</a></li>
+        <li><a href="./contact.html">contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="latestSec">
+      <div class="container">
+        <h2 class="serif-heading text-center latestSec__heading">Latest</h2>
+        <ul id="blogs">
+          <!-- all blogs dynamically added here -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="container flexContainer">
+      <section id="newsLetter" class="">
+        <div class="row">
+          <div class="col-6">
+            <p class="text-capitalize newsLetter__text fw-600">newsletter <br> signup</p>
+          </div>
+          <div class="col-6 newsLetterEmail__gridContainer">
+            <section class="newsLetterEmail">
+              <input type="text" placeholder="Your Email Address">
+              <i class="bi bi-arrow-right-square"></i>
+            </section>
+          </div>
+        </div>
+      </section>
+      <hr class="m-0">
+      <section id="linkSection" class="">
+        <div id="contactDetailsSection">
+          <!-- logo -->
+          <a href="index.html" class="max-w-fit logo d-flex flex-column justify-content-center align-items-center">
+            <span class="serif-heading text-white">Satnam</span>
+            <span class="fw-600 text-white">
+              Blogs
+            </span>
+          </a>
+          <address class="text-capitalize">
+            10 new town street v2 <br> SKW newstate USA
+          </address>
+          <a class="d-block" href="tel:(+88)012345698"><i class="me-4 bi bi-telephone-fill"></i>(+88)012345698</a>
+          <a class="d-block" href="mailto:support@gmail.com"><i class="me-4 bi bi-envelope"></i>support@gmail.com</a>
+        </div>
+        <ul>
+          <h5 class="footer__heading">other pages</h5>
+          <a href="#">about us</a>
+          <a href="#">privacy policy</a>
+          <a href="#">contact us</a>
+        </ul>
+        <ul>
+          <h5 class="footer__heading">privacy & terms</h5>
+          <a href="#">software principles</a>
+          <a href="#">application security</a>
+          <a href="#">unwanted software policy</a>
+        </ul>
+
+        <div>
+          <h5 class="footer__heading mb-4">follow us</h5>
+          <ul class="m-0" id="followSection">
+            <li><a class="rounded-circle" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a class="rounded-circle" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li><a class="rounded-circle" href="#"><i class="bi bi-linkedin"></i></a></li>
+            <li><a class="rounded-circle" href="#"><i class="bi bi-youtube"></i></a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <script src="./js/index.js" type="module"></script>
+
+  <script>
+    const myStorage = window.localStorage;
+    if (!myStorage.getItem('current-blogId')) {
+      myStorage.setItem('current-blogId', '0');
+    }
+
+    function setCurrentBlogIdInStorage(blogLinkElement) {
+      const currentBlogId = blogLinkElement.getAttribute('data-blogId');
+      myStorage.setItem('current-blogId', currentBlogId);
+      console.log("current blogId: ", myStorage.getItem('current-blogId'));
+    }
+  </script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

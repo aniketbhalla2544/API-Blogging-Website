@@ -1,0 +1,129 @@
+@import "../globals";
+
+#footer {
+  background-color: $black;
+  color: white;
+  padding: {
+    top: 12rem;
+    bottom: 8rem;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8rem;
+    justify-content: space-between;
+    align-items: stretch !important;
+  }
+
+  #newsLetter {
+    .newsLetter__text {
+      font-size: 8rem;
+      line-height: 1.3em;
+    }
+
+    .newsLetterEmail__gridContainer {
+      display: grid;
+      align-items: center;
+
+      section.newsLetterEmail {
+        width: 100% !important;
+        vertical-align: middle;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 0 4rem;
+        // border: 2px solid red;
+
+        input[type="text"] {
+          border: 0;
+          border-bottom: 3.5px solid $white;
+          background-color: transparent;
+          color: inherit;
+          font-size: 2.2rem;
+          font-weight: 300 !important;
+          flex-basis: 50% !important;
+          padding: 0.5em 0;
+        }
+
+        i.bi {
+          flex-basis: 30%;
+          font-size: 7rem;
+          line-height: 0 !important;
+        }
+      }
+    }
+  }
+
+  #linkSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .footer__heading {
+      font-family: 700 !important;
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+
+    & a:any-link {
+      color: $white;
+
+      &:hover:not(.logo) {
+        text-decoration: underline;
+        text-underline-offset: 0.35em;
+      }
+    }
+
+    #contactDetailsSection {
+      & > *:not(.logo) {
+        margin-bottom: 1em;
+      }
+
+      .logo {
+        margin-top: -2.2em;
+      }
+    }
+
+    & ul {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1.6em 0;
+
+      & * {
+        text-transform: capitalize;
+      }
+
+      & a {
+        font-weight: 300;
+      }
+    }
+
+    #followSection {
+      display: block;
+
+      & * {
+        line-height: 0 !important;
+      }
+
+      li {
+        display: inline-grid;
+        place-items: center;
+        margin-right: 0.5em;
+
+        & a {
+          padding: 1.2rem;
+          background-color: rgb(43, 42, 42);
+
+          &:hover {
+            background-color: rgb(80, 79, 79);
+          }
+        }
+
+        i.bi {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

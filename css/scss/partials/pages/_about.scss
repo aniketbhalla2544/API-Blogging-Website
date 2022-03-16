@@ -1,0 +1,84 @@
+#aboutPage {
+  p {
+    font-size: 2rem;
+    display: block;
+  }
+
+  section:not(#imgSec) {
+    margin: {
+      top: 8rem;
+      bottom: 20rem;
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 10rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  #aboutTextSecOne {
+    h1 {
+      max-width: 14ch;
+    }
+
+    p {
+      max-width: 55ch;
+      margin-left: auto;
+
+      & span {
+        margin-left: 4em;
+      }
+    }
+  }
+
+  #aboutTextSecTwo {
+    h1 {
+      max-width: 14ch;
+    }
+
+    p {
+      max-width: 55ch;
+      margin-left: auto;
+    }
+
+    p:nth-of-type(1) {
+      margin-top: 2em;
+      border-top: 4px solid black;
+      padding-top: 2.5em;
+    }
+  }
+
+  #imgSec {
+    overflow: hidden;
+    max-height: 60rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 14;
+      min-height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.685);
+    }
+
+    &::after {
+      content: "We are a family";
+      display: inline-block;
+      font-size: 8rem;
+      color: white;
+      z-index: 20;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, -6%);
+    }
+
+    img {
+      transform: translateY(-16.7rem);
+    }
+  }
+}

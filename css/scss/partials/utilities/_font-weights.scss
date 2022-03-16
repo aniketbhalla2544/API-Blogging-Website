@@ -1,0 +1,18 @@
+// font-weights
+$font-weights: (
+  "100": 100,
+  "200": 200,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+  "900": 900,
+);
+
+@each $fw-name, $fw-value in $font-weights {
+  .fw-#{$fw-name} {
+    font-weight: $fw-value;
+  }
+}

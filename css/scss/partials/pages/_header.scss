@@ -1,0 +1,29 @@
+#header {
+  #navbar {
+    margin-bottom: 0;
+    gap: 0 4rem;
+    $border-width: 2px;
+    $border-color: rgba(0, 0, 0, 0.432);
+    border-top: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color;
+
+    & > li {
+      & > a:any-link {
+        padding: 1.3rem 2.1rem;
+        display: inline-block;
+        color: $light-black;
+        font-weight: 400;
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.103);
+        cursor: pointer;
+      }
+    }
+
+    & > li > a {
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 1.7rem;
+    }
+  }
+}

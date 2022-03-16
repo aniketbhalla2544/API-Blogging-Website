@@ -1,0 +1,25 @@
+$light-red: #eb4d5a;
+$light-black: #3b3b3b;
+$black: black;
+$white: white;
+$light-text-color: rgb(102, 102, 102);
+// text color classes
+$text-colors: (
+  "light-red": $light-red,
+  "light-black": $light-black,
+  "light-text-color": $light-text-color,
+);
+
+@each $name, $value in $text-colors {
+  .text-#{$name} {
+    color: $value;
+  }
+}
+
+// bg color classes
+
+// black text variants
+
+// white text variants
+
+// buttons

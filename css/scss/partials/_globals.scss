@@ -1,0 +1,26 @@
+@import "./utilities/colors";
+@import "./utilities/font-weights";
+@import "./utilities/letter-spacing";
+
+// global classess
+.max-w-fit {
+  max-width: fit-content;
+}
+
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+.red-border {
+  border: 2px solid red;
+}
+
+.font-serif {
+  font-family: "Lora", serif;
+}
+
+.serif-heading {
+  font-family: "Lora", serif;
+  font-weight: 600;
+}

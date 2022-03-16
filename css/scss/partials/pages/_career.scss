@@ -1,0 +1,56 @@
+@import "../globals";
+
+#carrerPage {
+  #quoteSec {
+    margin: 20rem 0;
+    q {
+      display: block;
+      max-width: 40ch;
+      font-size: 3.6rem;
+      font-weight: 500;
+      text-align: center;
+      font-style: italic;
+      margin: 0 auto;
+    }
+  }
+
+  video {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+  }
+
+  #videoSec {
+    margin: {
+      top: 10rem;
+      bottom: 20rem;
+    }
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      line-height: 1.7;
+      color: $light-text-color;
+    }
+
+    button {
+      background-color: black;
+      font-weight: 600;
+      color: white;
+      padding: 1.1em 1.9em;
+      border: none;
+      text-transform: capitalize;
+      margin-top: 1.5em;
+    }
+
+    .col-6 {
+      padding-right: 4em;
+    }
+  }
+}
